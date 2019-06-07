@@ -20,7 +20,7 @@
 
     <failOnMissingWebXml>false</failOnMissingWebXml>
 
-    <maven.tomcat.port>9191</maven.tomcat.port>
+    <maven.tomcat.port>9090</maven.tomcat.port>
     <!-- URI do projeto no Tomcat. Precisa começar com "/". Exemplo: "/my-project" ficaria algo como "http://localhost:9090/my-project" -->
     <maven.tomcat.path>/</maven.tomcat.path>
   </properties>
