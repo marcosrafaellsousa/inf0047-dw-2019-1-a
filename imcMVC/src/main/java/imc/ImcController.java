@@ -22,7 +22,7 @@ public class ImcController extends HttpServlet {
         if (alturaStr != null && pesoStr != null) {
             double altura = Double.parseDouble(alturaStr);
             double peso = Double.parseDouble(pesoStr);
-            resultado = String.format("%.2f", Imc.calcularIMC(altura, peso));
+            resultado = String.format("Resultado: %.2f", Imc.calcularIMC(altura, peso));
         }
 
         // Adiciona a variável na requisição para o JSP trabalhar.
