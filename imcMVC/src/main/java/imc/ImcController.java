@@ -16,17 +16,23 @@ public class ImcController extends HttpServlet {
             HttpServletResponse response) throws ServletException, IOException {
 
         String resultado = "";
+        String analise = "";
 
         String alturaStr = request.getParameter("txtaltura");
         String pesoStr = request.getParameter("txtpeso");
         if (alturaStr != null && pesoStr != null) {
             double altura = Double.parseDouble(alturaStr);
             double peso = Double.parseDouble(pesoStr);
-            resultado = String.format("Resultado: %.2f", Imc.calcularIMC(altura, peso));
+            double imc = Imc.calcularIMC(altura, peso);
+            resultado = String.format("Resultado: %.2f", imc );
+            analise = Imc.analiseResultado(imc);
         }
+
+
 
         // Adiciona a variável na requisição para o JSP trabalhar.
         request.setAttribute("resultado", resultado);
+        request.setAttribute("analise", analise);
 
         // Redireciona requisição para o JSP.
         request.getRequestDispatcher("/imcCalculo.jsp").forward(request, response);

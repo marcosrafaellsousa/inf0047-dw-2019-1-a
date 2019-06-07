@@ -18,7 +18,7 @@
 		</div>
 		<div class="col-md-4">
 
-		    <h1 style= margin-top:5%> Calculo de imc com padrao MVC </h1>
+		    <h1 class="text-center" style= margin-top:5%> Calculo de imc com padrao MVC </h1>
 
 			<form role="form" style= margin-top:10%>
 				<div class="form-group">
@@ -41,7 +41,10 @@
 			</form>
 			<h2 class="text-center" style= margin-top:15%>
             ${resultado}
+            <br>
+            ${analise}
 			</h2>
+
 		</div>
 		<div class="col-md-4">
 		</div>
